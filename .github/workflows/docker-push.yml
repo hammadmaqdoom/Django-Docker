@@ -22,7 +22,8 @@ jobs:
       uses: okteto/apply@latest
       with:
         namespace: hammadmaqdoom
-        manifest: k8s.yaml
+        build: "true"
+        skipIfExists: true
 
     - name: "Push changes"
       uses: okteto/push@latest
